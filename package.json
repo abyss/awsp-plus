@@ -1,5 +1,5 @@
 {
-  "name": "awsp",
+  "name": "awsp-plus",
   "version": "0.3.0",
   "description": "Switch AWS Profiles easily",
   "main": "index.js",
@@ -11,8 +11,8 @@
   "author": "Abyss",
   "license": "ISC",
   "bin": {
-    "_awsp_prompt": "./index.js",
-    "_awsp": "./run.sh"
+    "_awspp_prompt": "./index.js",
+    "_awspp": "./run.sh"
   },
   "dependencies": {
     "inquirer": "^8.1.5",
