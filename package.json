@@ -3,12 +3,12 @@
   "version": "0.2.0",
   "description": "Switch AWS Profiles easily",
   "main": "index.js",
-  "homepage": "https://github.com/johnnyopao/awsp",
+  "homepage": "https://github.com/abyss/awsp-plus",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./postinstall.sh"
   },
-  "author": "Johnny Opao",
+  "author": "Abyss",
   "license": "ISC",
   "bin": {
     "_awsp_prompt": "./index.js",
