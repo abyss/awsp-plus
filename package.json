@@ -1,6 +1,6 @@
 {
   "name": "awsp",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Switch AWS Profiles easily",
   "main": "index.js",
   "homepage": "https://github.com/abyss/awsp-plus",
@@ -15,6 +15,7 @@
     "_awsp": "./run.sh"
   },
   "dependencies": {
-    "inquirer": "^8.1.5"
+    "inquirer": "^8.1.5",
+    "inquirer-search-list": "^1.2.6"
   }
 }
