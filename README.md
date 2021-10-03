@@ -1,4 +1,4 @@
-# AWSP - AWS Profile Switcher
+# AWSP Plus - Upgraded AWS Profile Switcher
 
 Easily switch between AWS Profiles
 
