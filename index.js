@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const inquirer = require("inquirer");
+inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 
 console.log("AWS Profile Switcher Plus");
 
@@ -33,7 +34,7 @@ const promptProfileChoice = (data) => {
 
   const profileChoice = [
     {
-      type: "list",
+      type: "search-list",
       name: "profile",
       message: "Choose a profile",
       choices: profiles,
