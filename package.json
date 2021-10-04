@@ -1,7 +1,7 @@
 {
   "name": "awsp-plus",
   "description": "Easily switch between and manage AWS CLI profiles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Abyss (https://abyss.dev)",
   "license": "ISC",
   "homepage": "https://github.com/abyss/awsp-plus",

@@ -8,7 +8,7 @@ else
   echo "$selected_profile" > $HOME/.awsp
 fi
 
-if [ -z "$selected_profile" ] || [ "$selected_profile" == "default" ]; then
+if [ -z "$selected_profile" ] || [ "$selected_profile" = "default" ]; then
   unset AWS_PROFILE
 else
   export AWS_PROFILE="$selected_profile"
