@@ -1,11 +1,15 @@
 {
   "name": "awsp-plus",
   "description": "Easily switch between and manage AWS CLI profiles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Abyss (https://abyss.dev)",
   "license": "ISC",
   "homepage": "https://github.com/abyss/awsp-plus",
-  "keywords": ["aws", "profile", "awsp"],
+  "keywords": [
+    "aws",
+    "profile",
+    "awsp"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,8 +23,8 @@
     "url": "https://github.com/abyss/awsp-plus/issues"
   },
   "bin": {
-    "_awspp_prompt": "./index.js",
-    "_awspp": "./run.sh"
+    "_awspp_prompt": "index.js",
+    "_awspp": "run.sh"
   },
   "dependencies": {
     "inquirer": "^8.1.5",

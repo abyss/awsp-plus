@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $# -eq 0 ]; then
-  AWS_PROFILE="$AWS_PROFILE" _awsp_prompt
+  AWS_PROFILE="$AWS_PROFILE" _awspp_prompt
   selected_profile="$(cat $HOME/.awsp)"
 else
   selected_profile="$@"
