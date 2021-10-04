@@ -58,11 +58,8 @@ const readAwsProfiles = () => {
 };
 
 const writeToConfig = (answers) => {
-  const profileChoice =
-    answers.profile === defaultProfileChoice ? "" : answers.profile;
-
   return new Promise((resolve, reject) => {
-    fs.writeFile(`${homeDir}/.awsp`, profileChoice, { flag: "w" }, (err) => {
+    fs.writeFile(`${homeDir}/.awsp`, answers.profile, { flag: "w" }, (err) => {
       if (err) {
         reject(err);
       } else {
