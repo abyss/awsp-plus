@@ -4,16 +4,16 @@ Easily switch between AWS Profiles.
 
 Expanded fork of [awsp by johnnyopao](https://github.com/johnnyopao/awsp) with additional features and ongoing maintenance.*
 
-\* best attempt will be made to regularly maintain, but no guarantee is provided.
+\* no guarantee expressed or implied.
 
 <img src="demo.gif" width="500">
 
 ## How it works
 
-The AWS CLI will use the profile present in the `AWS_PROFILE` environment variable, if no flag is set. This script parses the current aws profiles (`~/.aws/config`) and provides a filterable list, and then sets the environment variable based on the selection.
+The AWS CLI will use the profile present in the `AWS_PROFILE` environment variable, if no flag is set. This script parses the current aws profiles (`~/.aws/config`) and provides a filterable list, and then sets that environment variable based on your selection.
 
 ## Prerequisites
-Setup any number of profiles using the aws cli.
+Set up any number of profiles using the aws cli.
 
 ```sh
 aws configure --profile PROFILE_NAME
@@ -51,7 +51,7 @@ awsp development
 This is equivalent to `export AWS_PROFILE='development'`.
 
 ## Recommendation: Show your AWS Profile in your shell prompt
-For better visibility into what AWS Profile is selected it's helpful to configure your prompt to show the value of the env variable `AWS_PROFILE`.
+For better visibility into which AWS Profile is selected it's helpful to configure your prompt to show the value of the env variable `AWS_PROFILE`.
 
 <img src="screenshot.png" width="300">
 
@@ -67,7 +67,7 @@ function aws_prof {
 PS1="$PS1 \$(aws_prof)"
 ```
 
-Here's Johnny's example using oh-my-zsh themes, with nice colors:
+Here's [@johnnyopao](https://github.com/johnnyopao)'s example using oh-my-zsh themes, with nice colors:
 
 ```sh
 function aws_prof {
