@@ -10,7 +10,7 @@ const homeDir = process.env["HOME"];
 const configFilePath =
   process.env["AWS_CONFIG_FILE"] || `${homeDir}/.aws/config`;
 const profileRegex = /\[[default|profile ].*\]/g;
-const bracketsRemovalRegx = /(\[)|(\[profile )|(\])/g;
+const bracketsRemovalRegx = /(\[)|(profile )|(\])/g;
 const defaultProfileChoice = "default";
 
 const promptProfileChoice = (data) => {
