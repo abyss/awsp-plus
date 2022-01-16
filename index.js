@@ -60,6 +60,7 @@ const readAwsProfiles = () => {
 };
 
 const writeToConfig = (answers) => {
+  if (!answers) { return; }
   return new Promise((resolve, reject) => {
     fs.writeFile(`${homeDir}/.awsp`, answers.profile, { flag: "w" }, (err) => {
       if (err) {
