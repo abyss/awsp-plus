@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]; then
   AWS_PROFILE="$AWS_PROFILE" _awspp_prompt
-  selected_profile=$(cat "$HOME/.awsp")
+  if [ -f "$HOME/.awsp" ]; then selected_profile=$(cat "$HOME/.awsp"); fi
 else
   selected_profile="$*"
   echo "$selected_profile" > "$HOME/.awsp"
