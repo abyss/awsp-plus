@@ -9,8 +9,8 @@ console.log("AWS Profile Switcher Plus");
 const homeDir = process.env["HOME"];
 const configFilePath =
   process.env["AWS_CONFIG_FILE"] || `${homeDir}/.aws/config`;
-const profileRegex = /\[profile .*]/g;
-const bracketsRemovalRegx = /(\[profile )|(\])/g;
+const profileRegex = /\[[default|profile ].*\]/g;
+const bracketsRemovalRegx = /(\[)|(profile )|(\])/g;
 const defaultProfileChoice = "default";
 
 const promptProfileChoice = (data) => {
@@ -32,7 +32,7 @@ const promptProfileChoice = (data) => {
     return match.replace(bracketsRemovalRegx, "");
   });
 
-  profiles.push(defaultProfileChoice);
+  if (!profiles.length) profiles.push(defaultProfileChoice);
 
   const profileChoice = [
     {
@@ -49,17 +49,18 @@ const promptProfileChoice = (data) => {
 
 const readAwsProfiles = () => {
   return new Promise((resolve, reject) => {
-    fs.readFile(configFilePath, "utf8", (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(data);
-      }
-    });
+      fs.readFile(configFilePath, "utf8", (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
   });
 };
 
 const writeToConfig = (answers) => {
+  if (!answers) { return; }
   return new Promise((resolve, reject) => {
     fs.writeFile(`${homeDir}/.awsp`, answers.profile, { flag: "w" }, (err) => {
       if (err) {
