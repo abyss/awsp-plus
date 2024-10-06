@@ -1,5 +1,10 @@
 # AWSP Plus - Upgraded AWS Profile Switcher
 
+## :warning: Archived
+
+This application is archived and no longer maintained. A drop in replacement is available at [abyss/go-awsp](https://github.com/abyss/go-awsp). Please visit the new repository for any updates and improvements as well as better cross-system compatibility.
+
+## Introduction
 Easily switch between AWS Profiles.
 
 Expanded fork of [awsp by johnnyopao](https://github.com/johnnyopao/awsp) with additional features and ongoing maintenance.*
